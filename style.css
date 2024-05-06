@@ -420,3 +420,14 @@ article .icon {
 .email-icon {
   height: 2.5rem;
 }
+
+/* The footer section */
+
+footer {
+  height: 6vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
