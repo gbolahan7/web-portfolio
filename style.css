@@ -5,10 +5,14 @@
 * {
     margin: 0;
     padding: 0;
+    /* color: rgb(0, 0, 0); */
+    /* background-color: snow; */
+
   }
   
   body {
     font-family: "Poppins", sans-serif;
+
   }
 
   html {
@@ -17,6 +21,7 @@
   
   p {
     color: rgb(85, 85, 85);
+    /* color: rgb(255, 255, 255); */
   }
 
   /* transition */
@@ -193,10 +198,43 @@ section {
     font-size: 1.75rem;
     margin-bottom: 1rem;
   }
-  
+/*   
   .title {
     font-size: 3rem;
     text-align: center;
+  } */
+
+  .title {
+    /* width: 400px;
+    height: 200px; */
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title span {
+    /* text-transform: uppercase; */
+    padding: 0 0.5rem;
+    font-size: 50px;
+    animation: zoomup 2s ease infinite;
+    display: inline-block;
+    animation-delay: calc(50ms * var(--i));
+    color: rgb(85, 85, 85);
+  }
+  
+  @keyframes zoomup {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2) translateY(-50px);
+      filter: blur(1px);
+      opacity: 0;
+    }
   }
   
   #socials-container {
@@ -293,7 +331,7 @@ section {
     bottom: 2.5rem;
   }
   
-  .details-container {
+  .details-container{
     padding: 1.5rem;
     flex: 1;
     background: white;
@@ -301,7 +339,12 @@ section {
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+    /* box-shadow: 0 5px 35px 0px rgba(0,0,0,.1); */
+
   }
+
+  .details-container:hover::before,
+
   
   .section-container {
     gap: 4rem;
@@ -431,3 +474,6 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/*  Text animation */
