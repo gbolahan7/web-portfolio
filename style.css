@@ -1,6 +1,27 @@
 /* general */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* === THEME VARIABLES === */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --secondary-text: #555555;
+  --card-bg: #fafafa;
+  --border-color: #a3a3a3;
+}
+
+body.dark-theme {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --secondary-text: #dddddd;
+  --card-bg: #111111;
+  --border-color: #333333;
+}
+/* === END THEME VARIABLES === */
+
+
+
+
 
 * {
     margin: 0;
@@ -10,20 +31,28 @@
 
   }
   
-  body {
+  /* body {
     font-family: "Poppins", sans-serif;
 
-  }
+  } */
+
+  body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
   html {
     scroll-behavior: smooth;
   }
   
   p {
-    color: rgb(85, 85, 85);
+    /* color: rgb(85, 85, 85); */
     /* color: rgb(255, 255, 255); */
+    color: var(--secondary-text);
   }
-
   /* transition */
 
 a,
@@ -50,19 +79,33 @@ nav {
   font-size: 1.5rem;
 }
 
-a {
+/* a {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
+} */
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-a:hover {
+
+/* a:hover {
     color: grey;
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
   }
-  
+   */
+a:hover {
+  color: var(--secondary-text);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: var(--secondary-text);
+}
+
+
   .logo {
     font-size: 2rem;
   }
@@ -205,7 +248,8 @@ section {
   text-justify: inter-word;  /* distributes spacing between words */
   line-height: 1.6;          /* improves readability */
   font-size: 1rem;
-  color: #333;
+  /* color: #333; */
+   color: var(--secondary-text);
 }
 
 /*   
@@ -344,13 +388,15 @@ section {
   .details-container{
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    /* background: white; */
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    /* border-color: rgb(163, 163, 163); */
     text-align: center;
     /* box-shadow: 0 5px 35px 0px rgba(0,0,0,.1); */
 
+    background: var(--card-bg);
+    border-color: var(--border-color);
   }
 
   .details-container:hover::before,
@@ -413,9 +459,14 @@ article .icon {
   position: relative;
 }
 
-.color-container {
+/* .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+} */
+
+.color-container {
+  background: var(--card-bg);
+  border-color: var(--border-color);
 }
 
 .project-img {
@@ -448,8 +499,11 @@ article .icon {
   justify-content: center;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  /* border-color: rgb(163, 163, 163);
+  background: (250, 250, 250); */
+
+  background: var(--card-bg);
+  border-color: var(--border-color);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -484,6 +538,42 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/* === THEME TOGGLE BUTTON === */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+.theme-toggle .moon {
+  display: none;
+}
+
+/* When dark mode is active, swap icons */
+body.dark-theme .theme-toggle .sun {
+  display: none;
+}
+
+body.dark-theme .theme-toggle .moon {
+  display: inline;
+}
+
 
 
 /*  Text animation */
