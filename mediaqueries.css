@@ -21,6 +21,15 @@
       display: flex;
     }
 
+/* Show it on mobile */
+@media screen and (max-width: 1200px) {
+  .hamburger-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
     #experience,
   .experience-details-container {
     margin-top: 2rem;

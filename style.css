@@ -19,10 +19,6 @@ body.dark-theme {
 }
 /* === END THEME VARIABLES === */
 
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -121,13 +117,25 @@ a:hover {
   
   /* Hamburger menu */
 
-#hamburger-nav {
+/* #hamburger-nav {
     display: none;
-  }
+  } */
+
+  #hamburger-nav {
+  display: none;
+  /* justify-content: space-between;
+  align-items: center;
+  padding: 1rem; */
+}
+
+.hamburger-right {
+  display: none;
+}
   
   .hamburger-menu {
     position: relative;
     display: inline-block;
+    z-index: 1; 
   }
   
   .hamburger-icon {
@@ -554,7 +562,7 @@ footer p {
   position: relative;
   top: 2px;
   right: 1.5rem;
-  z-index: 1000;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,6 +589,9 @@ body.dark-theme .theme-toggle .moon {
   display: inline;
 }
 
-
+/* Mobile toggle position */
+#hamburger-nav .theme-toggle {
+  margin-left: 1rem;
+}
 
 /*  Text animation */
