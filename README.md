@@ -16,7 +16,5 @@ A clean, responsive personal web portfolio built with vanilla HTML, CSS and Java
 - CSS3 (responsive design & media queries)
 - JavaScript (vanilla)
 
-## Deployment
 
-- Netlify: hosted on Netlify - url - https://abinfo.netlify.app
 
