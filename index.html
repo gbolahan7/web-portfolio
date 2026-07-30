@@ -1,456 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>web portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mediaqueries.css">
-  <!-- <link rel="stylesheet" href="hover.css"> -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abass Durodola — Software Developer & Software Development Engineer in Test. Building and validating reliable web, backend, and API-driven systems." />
+  <meta name="theme-color" content="#0B0F14" />
+  <title>Abass Durodola · Software Developer & SDET</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <nav id="desktop-nav">
-    <div class="logo"><a href="index.html">Home </a> </div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <div class="page-bg" aria-hidden="true"></div>
 
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-      <span class="sun">☀️</span>
-      <span class="moon">🌙</span>
-    </button>
-  </nav>
-  <!-- <nav id="hamburger-nav">
-    <div class="logo"> Abass </div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> -->
-
-  <nav id="hamburger-nav">
-  <div class="logo">Abass</div>
-
-  <div class="hamburger-right">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle dark mode">
-        <span class="sun">☀️</span>
-        <span class="moon">🌙</span>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#top">Abass</a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+        </span>
       </button>
-  </div>
-
-  <div class="hamburger-menu">
-    <div class="menu-links">
-      <li><a href="#about" onclick="toggleMenu()">About</a></li>
-      <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-      <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </div>
-</nav>
+  </header>
 
-
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
+  <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <section id="profile">
-    <!-- <div class="section__pic-container">
-        <img src="./assets/profile-image-.png" alt="Abass Profile">
-    </div> -->
-    <div class="section__text">
-      <p class="section__text__p1">Hi there! I'm</p>
-      <!-- <h1 class="title">Abass Durodola</h1> -->
-      <div class="title">
-        <span style="--i:1">A</span>
-        <span style="--i:2">b</span>
-        <span style="--i:3">a</span>
-        <span style="--i:4">s</span>
-        <span style="--i:5">s</span>
-        <span style="--i:6"></span>
-        <span style="--i:7">D</span>
-        <span style="--i:8">u</span>
-        <span style="--i:9">r</span>
-        <span style="--i:10">o</span>
-        <span style="--i:11">d</span>
-        <span style="--i:12">o</span>
-        <span style="--i:13">l</span>
-        <span style="--i:14">a</span>
 
-
+  <main id="top">
+    <section class="hero" id="profile">
+      <div class="hero-visual" aria-hidden="true">
+        <img src="./assets/corp-image2.jpg" alt="" />
       </div>
-      <p class="section__text__p2">Software Developer</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/Abass_Durodola_CV.pdf')">Download CV
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="linkedin profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/abass-durodola'">
-        <img src="./assets/github.png" alt="github profile" class="icon"
-          onclick="location.href='https://www.github.com/gbolahan7'">
-      </div>
-    </div>
-
-  </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1><br><br><br><br><br><br>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/corp-image2.jpg" alt="Profile picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p>5+ years <br />software Development</p>
-          </div>
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>B.Sc. Computer Engineering<br />M.Sc. Computer Science</p>
-          </div>
+      <div class="hero-content">
+        <p class="hero-kicker reveal">Software Developer &amp; Software Development Engineer in Test</p>
+        <h1 class="hero-name reveal" aria-label="Abass Durodola">
+          <span class="name-word" aria-hidden="true">
+            <span style="--i:1">A</span><span style="--i:2">b</span><span style="--i:3">a</span><span style="--i:4">s</span><span style="--i:5">s</span>
+          </span>
+          <span class="name-word" aria-hidden="true">
+            <span style="--i:6">D</span><span style="--i:7">u</span><span style="--i:8">r</span><span style="--i:9">o</span><span style="--i:10">d</span><span style="--i:11">o</span><span style="--i:12">l</span><span style="--i:13">a</span>
+          </span>
+        </h1>
+        <p class="hero-lead reveal">
+          I design and build web apps and backend systems across fintech, banking, and digital platforms — then harden them with automated test strategy that improves release confidence.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="./assets/Abass_Durodola_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
         </div>
-        <div class="text-container">
+        <div class="hero-social reveal">
+          <a href="https://www.linkedin.com/in/abass-durodola" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+          <a href="https://www.github.com/gbolahan7" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 .3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <p class="eyebrow">About</p>
+        <h2>Engineer first. Quality always.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <img src="./assets/corp-image2.jpg" alt="Portrait of Abass Durodola" width="480" height="560" />
+        </div>
+        <div class="about-copy reveal">
           <p>
-            I am a Software Developer with 5+ years of experience designing and building user-friendly, high-performing
-            web and mobile applications.
-            My work blends clean architecture with practical problem-solving — focusing on reliable, scalable systems
-            that make technology work better for people and businesses.
-            I have worked extensively with PHP, Java, Node.js, Python, and JavaScript, using frameworks like Laravel,
-            React, and Tailwind CSS to deliver responsive and maintainable applications.
-            <!-- I am experienced with both SQL and NoSQL databases, including MongoDB and MySQL, with a strong focus on performance tuning and optimization.
-            My background also includes hands-on work with Docker for containerization, Machine Learning for predictive analytics, and DevOps tools like Jenkins and GitHub Actions for CI/CD automation. 
-            I am passionate about building systems that automate processes, improve data quality, and drive smarter, faster decisions.
-       -->
+            Software Developer &amp; Software Development Engineer in Test with a strong engineering background.
+            I specialize in building and validating web applications, backend services, and API-driven systems across fintech, banking, and digital platforms.
           </p>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section><br><br><br><br><br><br>
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Frontend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTML</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Boostrap</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Tailwind CSS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>TypeScript</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Material UI</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Backend Development</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>PHP</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Java </h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Laravel</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Node JS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>Git</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
+          <p>
+            I write production-minded code for APIs, services, and web/app features, and design the automated and manual test strategies,
+            integration checks, automation frameworks, and CI/CD pipelines that keep those systems reliable and release-ready.
+          </p>
+          <div class="about-meta">
+            <div>
+              <h3>Education</h3>
+              <p>MSc Computer Science — Teesside University</p>
+              <p>BSc Computer Engineering — Obafemi Awolowo University</p>
+            </div>
+            <div>
+              <h3>Focus</h3>
+              <p>Web &amp; app development · Backend &amp; APIs · Test automation · CI/CD · System reliability</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/notez-app.png" alt="Project 1" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">The Notez App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/notez-app'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://abass01-notez-app.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/proxview-mobileapp.png" alt="Project 2" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">ProxView Mobile App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/proxviewappp'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/proxviewapp'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/gitfinder.PNG" alt="Project 2" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">GitFinder App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/github-finder-app'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='http://github-finder-app-gbolahan7.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/invoice-app.PNG" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Invoice App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/Invoicing-MS'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://invoicing-ms.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/housemarket-app.PNG" alt="Project 4" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">HouseMarket App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/House-MarketPlace'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://ab07-house-market-place.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/worknow.png" alt="Project 5" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Worknow App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gbolahan7/worknow'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/gbolahan7/worknow'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/feedback-app.png" alt="Project 6" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Feedback App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/Feedback-app'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://ab-07-feedback.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/job-tracker app.png" alt="Project 7" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Job Tracker App</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/gbolahan7/job-tracker'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://ab-job-tracker.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-  </section>
+    </section>
 
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:examplemail@gmail.com">abassdurodola07@gmail.com</a></p>
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I’ve built and tested.</h2>
       </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/abass-durodola">LinkedIn</a></p>
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <p class="timeline-role">QA Engineer</p>
+            <p class="timeline-org">Space Ops · Ontario, Canada</p>
+            <p class="timeline-date">Dec 2025 – Present</p>
+          </div>
+          <ul class="timeline-points">
+            <li>Built Python + Selenium utilities to generate short-lived payment tokens for testing, cutting manual setup and speeding API/regression runs by ~30%.</li>
+            <li>Delivered end-to-end coverage for One-Click Checkout across checkout, authorization, and payout flows for 4+ enterprise merchants.</li>
+            <li>Implemented Playwright + Python smoke and regression suites, reducing post-deployment verification time by ~50%.</li>
+            <li>Maintained a living validation guide covering environments, test data, cases, and API/database checks.</li>
+          </ul>
+        </li>
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <p class="timeline-role">Software Developer in Test</p>
+            <p class="timeline-org">DOH Consulting Inc. · Ontario, Canada</p>
+            <p class="timeline-date">Oct 2025 – Dec 2025</p>
+          </div>
+          <ul class="timeline-points">
+            <li>Designed testable REST APIs with Java Spring Boot and MySQL for scalable backend systems.</li>
+            <li>Built APIs for user management, authentication, and session tracking with JUnit unit and integration tests.</li>
+            <li>Ran API performance and load validation to surface stability risks and improve response reliability.</li>
+          </ul>
+        </li>
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <p class="timeline-role">Analyst (Innovation)</p>
+            <p class="timeline-org">Virgin Money · Newcastle, UK</p>
+            <p class="timeline-date">Jun 2024 – Oct 2025</p>
+          </div>
+          <ul class="timeline-points">
+            <li>Developed Python automation for credit decisioning across personal loans and current accounts.</li>
+            <li>Engineered a Selenium-based mortgage affordability tool that reduced manual validation effort by over 70%.</li>
+            <li>Designed ETL and data validation scripts, and built Plotly/Matplotlib visualizations with Python + SAS for real-time analysis.</li>
+          </ul>
+        </li>
+        <li class="timeline-item reveal">
+          <div class="timeline-meta">
+            <p class="timeline-role">Software Developer (SDET)</p>
+            <p class="timeline-org">Innixx · Lagos, Nigeria</p>
+            <p class="timeline-date">Aug 2023 – Apr 2024</p>
+          </div>
+          <ul class="timeline-points">
+            <li>Wrote Selenium automation in Python for load and high-volume payment workflow testing.</li>
+            <li>Maintained API and integration tests for backend services, validating interactions and error handling.</li>
+            <li>Integrated automated tests into CI/CD for Node.js and Java services (Jest, JUnit) and improved PostgreSQL/MongoDB query throughput by 25%+.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools I have worked with.</h2>
       </div>
-    </div>
-  </section>
-  <footer>
-    <p> Copyright &#169; 2024 Abass Durodola. All Rights Reserved.</p>
+      <div class="skills-groups">
+        <div class="skills-group reveal">
+          <h3>Languages</h3>
+          <p>Python · JavaScript · PHP · Node.js · Java</p>
+        </div>
+        <div class="skills-group reveal">
+          <h3>Test automation</h3>
+          <p>Selenium · Playwright · Cypress · Pytest · JUnit · Postman</p>
+        </div>
+        <div class="skills-group reveal">
+          <h3>Quality practices</h3>
+          <p>API testing · Regression · Black-box · Load testing · Agile/Scrum · Jira</p>
+        </div>
+        <div class="skills-group reveal">
+          <h3>Platforms &amp; data</h3>
+          <p>MySQL · PostgreSQL · MongoDB · SQL Server · Docker · Jenkins · AWS EC2 · Git · Power BI</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects that show the craft.</h2>
+      </div>
+
+      <article class="project project-featured reveal">
+        <div class="project-media">
+          <img src="./assets/qa-rag-evaluation.jpg" alt="Software QA Engineering Q&A landing page" width="1400" height="840" loading="lazy" />
+        </div>
+        <div class="project-body">
+          <h3>QA RAG Evaluation</h3>
+          <p>
+            A grounded Q&amp;A system for software testing and quality engineering. Asks retrieve relevant context
+            and return answers tailored to QA, system design, and evaluation workflows.
+          </p>
+          <p class="project-stack">Python · RAG · AI evaluation · QA tooling</p>
+        </div>
+      </article>
+
+      <div class="project-list">
+        <article class="project reveal">
+          <div class="project-media">
+            <img src="./assets/notez-app.png" alt="Notez App screenshot" width="800" height="500" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>The Notez App</h3>
+            <p>A clean notes experience focused on fast capture and a minimal, readable interface.</p>
+            <p class="project-stack">React · JavaScript</p>
+            <div class="project-links">
+              <a href="https://github.com/gbolahan7/notez-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://abass01-notez-app.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media">
+            <img src="./assets/invoice-app.png" alt="Invoice App screenshot" width="800" height="500" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>Invoice App</h3>
+            <p>Lightweight invoicing for freelancers and small teams — create, track, and manage invoices in one place.</p>
+            <p class="project-stack">React · JavaScript</p>
+            <div class="project-links">
+              <a href="https://github.com/gbolahan7/Invoicing-MS" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://invoicing-ms.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media">
+            <img src="./assets/housemarket-app.png" alt="HouseMarket App screenshot" width="800" height="500" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>HouseMarket</h3>
+            <p>A property marketplace UI for browsing and listing homes with a clear, responsive browsing flow.</p>
+            <p class="project-stack">React · Firebase</p>
+            <div class="project-links">
+              <a href="https://github.com/gbolahan7/House-MarketPlace" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://ab07-house-market-place.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media">
+            <img src="./assets/worknow.png" alt="Worknow App screenshot" width="800" height="500" loading="lazy" />
+          </div>
+          <div class="project-body">
+            <h3>Worknow</h3>
+            <p>A job-focused web app for organizing opportunities and workflow — currently in development.</p>
+            <p class="project-stack">JavaScript · Web app</p>
+            <div class="project-links">
+              <a href="https://github.com/gbolahan7/worknow" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="link-muted">Live demo coming soon</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s talk about quality and delivery.</h2>
+        <p class="contact-lead">Open to Software Developer &amp; SDET roles.</p>
+      </div>
+      <div class="contact-actions reveal">
+        <a class="contact-link" href="mailto:abassdurodola07@gmail.com">abassdurodola07@gmail.com</a>
+        <a class="contact-link" href="https://www.linkedin.com/in/abass-durodola" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Abass Durodola. All rights reserved.</p>
   </footer>
+
   <script src="script.js"></script>
-  <!-- <p>Hello there!</p> -->
-  <!-- <button id="theme-toggle">Toggle Theme</button> -->
-
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.getElementById("theme-toggle");
-
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-theme");
-      }
-
-      toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-        localStorage.setItem(
-          "theme",
-          document.body.classList.contains("dark-theme") ? "dark" : "light"
-        );
-      });
-    });
-  </script> -->
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleButtons = document.querySelectorAll(".theme-toggle");
-
-    // Load saved theme
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-theme");
-    }
-
-    // Add click listener to all theme toggles (desktop + mobile)
-    toggleButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-
-        localStorage.setItem(
-          "theme",
-          document.body.classList.contains("dark-theme") ? "dark" : "light"
-        );
-      });
-    });
-  });
-</script>
-
-
 </body>
-
 </html>
