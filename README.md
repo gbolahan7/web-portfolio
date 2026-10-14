@@ -18,4 +18,12 @@ A dark-first, single-page personal portfolio built with vanilla HTML, CSS, and J
 
 ## Deploy
 
-Push to the GitHub repo connected to Netlify. The site publishes from the repo root with no build command.
+Push to the GitHub repo connected to Netlify. The site publishes from the repo root with no build command: https://abassinfo.netlify.app/
+
+### Updating the CV
+
+The **Download CV** link in `index.html` points to `assets/Abass_Durodola_CV.pdf`.
+To publish a new CV, replace that PDF while keeping the same filename and path,
+then commit and push the change to the production branch connected to Netlify.
+Netlify will deploy the commit and serve the updated PDF; no HTML changes or
+build step are needed.
